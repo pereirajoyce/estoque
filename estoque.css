@@ -1,0 +1,169 @@
+:root {
+  /* Cores */
+  --first-color: #8e8e8e;
+  --title-color: #47b3c0;
+  --text-color: #3957f4;
+  --container-color: #f0f0f0;
+
+  /* Fonte e Tipografia */
+  /*.5rem = 8px | 1rem = 16px */
+  --body-font: Arial, sans-serif;
+  --h1-font-size: 1.5rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1.15rem;
+  --normal-font-size: 1rem;
+  --small-font-size: 0.875rem;
+  --smaller-font-size: 0.813rem;
+
+  /* Fonte Weight */
+  --font-medium: 500;
+  --font-semibold: 600;
+  --font-bold: 700;
+
+  /* Box Shadow */
+  --shadow: 0px 5px 0px 0px rgba(0, 0, 0, 0.1);
+
+  /* Border Radius */
+  --border-radius: 20px;
+}
+
+/* Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  background-color: #ffffff;
+  color: var(--title-color);
+  padding: 30px 20px;
+  box-shadow: var(--shadow);
+}
+
+body {
+  background-color: var(--container-color);
+  line-height: 1.7;
+  color: var(--text-color);
+}
+
+h1,
+h2,
+h3 {
+  color: var(--title-color);
+  font-weight: var(--font-semibold);
+  line-height: 1.2;
+  flex-grow: 1;
+  text-align: center;
+}
+
+ul {
+  list-style: none;
+}
+
+/* Botões */
+
+header .fa-bars {
+  display: none;
+}
+
+button.adicionar {
+  border: none;
+  cursor: pointer;
+  position: fixed;
+  background-color: #fff;
+  padding: 10px;
+  box-shadow: var(--shadow);
+  color: var(--title-color);
+  border-radius: 50%;
+  bottom: 20px;
+  right: 20px;
+  margin: 30px;
+}
+
+#pesquisar-produto {
+  border: none;
+  outline: none;
+}
+
+/* Tabela */
+table {
+  width: 90%;
+  margin: 70px auto;
+  color: var(--text-color);
+  font-size: var(--h1-font-size);
+}
+
+th,
+td {
+  padding: 10px;
+  border-bottom: 3px solid #ddd; /* Adicione uma borda na parte inferior de cada célula */
+}
+
+.descricao-produto {
+  font-size: var(--h2-font-size);
+  color: var(--first-color);
+}
+
+/* Estilos para as classes de status de estoque */
+span.estoque-status {
+  font-size: var(--h2-font-size);
+  display: block;
+  margin-top: 5px;
+}
+
+span.estoque-disponivel {
+  color: #29bb35;
+}
+
+span.estoque-baixo {
+  color: #ffd452;
+}
+
+span.estoque-fora {
+  color: #ca3434;
+}
+
+/* Responsividade */
+@media screen and (max-width: 1024px) {
+  :root {
+    --h1-font-size: 2rem;
+    --h2-font-size: 1.75rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: 0.813rem;
+    --smaller-font-size: 0.7rem;
+  }
+
+  header .fa-bars {
+    display: block;
+  }
+
+  header .fa-search {
+    font-size: 3rem;
+  }
+
+  button.adicionar {
+    width: 150px;
+    height: 150px;
+    font-size: var(--h1-font-size);
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  #pesquisar-produto {
+    text-align: right;
+    padding-right: 30px;
+    font-size: var(--h1-font-size);
+  }
+  
+}
