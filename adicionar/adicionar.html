@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>Adicionar Produto</title>
+    <link rel="stylesheet" type="text/css" href="adicionar.css">
+</head>
+
+<body>
+    <div class="carousel-buttons">
+        <div id="slideButtons" class="slide-buttons">
+            <button onclick="goToSlide(0)" class="slide-button"></button>
+            <button onclick="goToSlide(1)" class="slide-button"></button>
+            <button onclick="goToSlide(2)" class="slide-button"></button>
+            <button onclick="goToSlide(3)" class="slide-button"></button>
+            <button onclick="goToSlide(4)" class="slide-button"></button>
+            <button onclick="goToSlide(5)" class="slide-button"></button>
+        </div>
+    </div>
+    <div class="carousel">
+        <div class="carousel-container">
+            <div class="carousel-slide">
+                <h2>Defina o nome do seu produto</h2>
+                <p>Escolha um nome para você e seu cliente poderem identificá-lo.</p>
+                <input type="text" class="form-control">
+            </div>
+            <div class="carousel-slide">
+                <h2>Quantidade de Produtos</h2>
+                <p>A quantidade ficará armazenada para você controlar o seu estoque.</p>
+                <input type="number" class="form-control">
+            </div>
+            <div class="carousel-slide">
+                <h2>Descreva seu produto</h2>
+                <p>Coloque detalhes sobre o que está sendo oferecido.</p>
+                <textarea class="form-control"></textarea>
+            </div>
+            <div class="carousel-slide">
+                <h2>Adicione as categorias</h2>
+                <p>Separar os produtos em categorias pode facilitar a sua organização e ajuda os clientes a encontrarem
+                    o que querem.</p>
+                <input type="text" class="form-control">
+            </div>
+            <div class="carousel-slide">
+                <h2>Adicione uma foto do seu produto</h2>
+                <p>As fotos dos produtos aparecem para seus clientes em sua loja. É uma boa forma de mostrar o que você
+                    está oferecendo.</p>
+                <div class="image-placeholder">
+                    <div class="img-descricao">
+                        As dimensões da foto
+                        devem ser de 600 x 600<br>
+                        <input type="file" accept="image/*" id="imageInput" class="hidden-input"/>
+                        <label for="imageInput" class="image-label">+</label>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-slide">
+                <h2>Defina o valor de venda</h2>
+                <p>Para escolher o valor que será cobrado, é importante você saber o custo do seu produto e o lucro que
+                    você pretende obter.</p>
+                <input type="number" class="form-control">
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <button id="continueButton" class="continue-button" onclick="continueSlide()">CONTINUAR</button>
+    </div>
+    <script src="adicionar.js"></script>
+</body>
+
+</html>
